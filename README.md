@@ -1,3 +1,17 @@
-# andrezzoid.github.io
+# André Jonas personal website
 
-My personal Website on Github. This repo features only the static and generated content. The complete code behind shall be made public later.
+## Getting started
+
++ Clone the source from GitHub
+
++ Install the node dependencies:
+
+```shell
+npm install
+```
+
++ Start the Gatsby development server & open http://localhost:8000:
+
+```shell
+npm start && open http://localhost:8000
+```
