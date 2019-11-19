@@ -16,12 +16,19 @@ class Resume extends React.Component {
     const picture = data.avatar.childImageSharp.fluid
     return (
       <Layout location={this.props.location}>
-        <SEO title="About" />
+        <SEO title="About André" />
         <div className="max-w-4xl font-serif">
           <h1 className="text-5xl leading-tight font-serif font-bold mb-8">
-            Hi, I'm André Jonas 👋
+            Hi, I'm André Jonas{" "}
+            <span role="img" aria-label="waving hand">
+              👋
+            </span>
           </h1>
-          <Image className="mb-8" fluid={picture} alt="André Jonas" />
+          <Image
+            className="mb-8"
+            fluid={picture}
+            alt="André Jonas at the beach"
+          />
 
           <p className="mb-8">
             But you can just call me <strong>Jonas</strong>. I am a seasoned
@@ -54,14 +61,18 @@ class Resume extends React.Component {
             development as a way to pay for my tuition fees and expenses in
             Lisbon. In the next 5 years I've taught thousands of students, even
             some of my University colleagues (they've all nailed their exams,
-            obviously 😄).
+            obviously{" "}
+            <span role="img" aria-label="grining face with squinting eyes">
+              😄
+            </span>
+            ).
           </p>
 
           <p className="mb-8">
-            Moved back to the Algarve in 2015 to be my with my wonderful wife
-            and our crazy dogs but there were little to no jobs here for me so
-            I've started working remotely. Since then I've worked with such
-            amazing and talented people in such companies like{" "}
+            Moved back to the Algarve in 2015 to be with my wonderful wife and
+            our crazy dogs but there were little to no jobs here for me so I've
+            started working remotely. Since then I've worked with such amazing
+            and talented people in such companies like{" "}
             <Link
               className="text-green-500 hover:text-green-400"
               to="https://www.yld.io/"
@@ -110,17 +121,24 @@ class Resume extends React.Component {
             to live. I get to meet amazing people all around the world, to live
             in the countryside but near the beach, to have pet animals, to have
             my own farm and grow my own food and I get to do swimming and
-            surfing every week. I am truly blessed 🙏
+            surfing every week. I am truly blessed{" "}
+            <span role="img" aria-label="hands pressed together">
+              🙏
+            </span>
           </p>
 
           <h3 className="text-3xl font-bold leading-tight">
-            I'm back on the job market 🎉 and looking for a remote position
-            alongside a bright and kind group of individuals that share my
-            values - fairness, responsability and transparency. If you think I
-            could be a great fit for your company, feel free to{" "}
+            I'm back on the job market{" "}
+            <span role="img" aria-label="party popper">
+              🎉
+            </span>{" "}
+            and looking for a remote position alongside a bright and kind group
+            of individuals that share my values - fairness, responsability and
+            transparency. If you think I could be a great fit for your company,
+            feel free to{" "}
             <Link
               className="text-green-500 hover:text-green-400"
-              to="mailto:yo@andre.jonas.me"
+              to="mailto:yo@andrejonas.me"
             >
               drop me a line.
             </Link>
@@ -136,7 +154,7 @@ export const pageQuery = graphql`
     avatar: file(absolutePath: { regex: "/secondary-pic.jpg/" }) {
       childImageSharp {
         fluid(maxWidth: 1024) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

@@ -12,9 +12,8 @@ import formatReadingTime from "../utils/format-reading-time"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const { post, site } = this.props.data
-    const siteTitle = site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const { post } = this.props.data
+    // const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location}>
@@ -77,9 +76,7 @@ class BlogPostTemplate extends React.Component {
           </ul>
         </nav> */}
 
-        <div className="max-w-4xl">
-          <RecentPosts />
-        </div>
+        <RecentPosts />
       </Layout>
     )
   }
@@ -89,12 +86,6 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     post: mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)

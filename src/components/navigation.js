@@ -23,7 +23,7 @@ const Navigation = ({ location }) => {
       avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
         childImageSharp {
           fixed(width: 45) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
@@ -60,13 +60,10 @@ const Navigation = ({ location }) => {
         {currentPage && (
           <Link className="pr-3" to="/">
             <Image
-              className="bg-gray-800"
+              className="flex-shrink-0 rounded-full bg-gray-800"
               fixed={avatar}
               alt={author}
               loading="eager"
-              style={{
-                borderRadius: "100%",
-              }}
               imgStyle={{
                 borderRadius: "100%",
               }}

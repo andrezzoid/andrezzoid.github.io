@@ -55,7 +55,7 @@ const RecentPosts = () => {
   const { posts } = data
 
   return (
-    <section>
+    <section className="max-w-4xl">
       <h2 className="mt-20 mb-12 text-3xl text-center gatsby-link font-serif font-bold leading-tight">
         Recent Articles
       </h2>

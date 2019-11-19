@@ -68,4 +68,4 @@ defining classes for each markdown element like titles, paragraphs or code. Have
 
 ## If you liked it...
 
-If you want to create a website or blog with Tailwind and don't know exactly how to start, I've created a [gatsby-starer-blog-tailwindcss](https://github.com/andrezzoid/gatsby-starter-blog-tailwindcss) (check the demo [here](https://gatsby-starter-blog-tailwindcss-demo.netlify.com/)) starter for you to use. Let me know how you've used it!
+If you want to create a website or blog with Tailwind and don't know exactly how to start, I've created a [gatsby-starter-blog-tailwindcss](https://github.com/andrezzoid/gatsby-starter-blog-tailwindcss) (check the demo [here](https://gatsby-starter-blog-tailwindcss-demo.netlify.com/)) starter for you to use. Let me know how you've used it!
