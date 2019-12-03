@@ -7,7 +7,7 @@ import formatReadingTime from "../utils/format-reading-time"
 const Post = ({ excerpt, slug, timeToRead, title }) => (
   <article className="flex flex-col w-auto lg:w-1/3 p-10 md:mx-4 mb-8 rounded border border-gray-700">
     <header className="mb-3">
-      <h4 className="text-green-500 hover:text-green-400 text-2xl mb-1 font-serif">
+      <h4 className="text-green-500 hover:text-green-400 text-2xl mb-1 font-sans font-bold">
         <Link to={slug}>{title}</Link>
       </h4>
     </header>
@@ -56,7 +56,7 @@ const RecentPosts = () => {
 
   return (
     <section className="max-w-4xl">
-      <h2 className="mt-20 mb-12 text-3xl text-center gatsby-link font-serif font-bold leading-tight">
+      <h2 className="mt-20 mb-12 text-3xl text-center gatsby-link font-sans font-bold leading-tight">
         Recent Articles
       </h2>
       <div className="flex flex-col lg:flex-row justify-center md:-mx-4 md:-mb-8">

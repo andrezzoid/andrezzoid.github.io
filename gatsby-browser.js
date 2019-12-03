@@ -1,5 +1,6 @@
 // custom typefaces
-import "typeface-aleo"
+import "typeface-lora"
+import "typeface-source-sans-pro"
 
 // TaildwindCSS
 import "tailwindcss/base.css"

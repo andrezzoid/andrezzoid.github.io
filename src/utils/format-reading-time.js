@@ -1,3 +1,3 @@
 export default function formatReadingTime(minutes) {
-  return `${minutes} ${minutes === 1 ? "minute" : "minutes"} read`
+  return `${minutes || 0} ${minutes <= 1 ? "minute" : "minutes"} read`
 }

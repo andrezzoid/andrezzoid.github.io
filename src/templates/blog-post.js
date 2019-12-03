@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
         />
         <article className="flex flex-col items-center font-serif">
           <header className="max-w-3xl w-full mb-12">
-            <h1 className="text-5xl leading-tight font-serif font-bold">
+            <h1 className="text-5xl leading-tight font-serif">
               {post.frontmatter.title}
             </h1>
             <p className="text-gray-600 font-sans text-base">

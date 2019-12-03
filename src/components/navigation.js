@@ -70,7 +70,7 @@ const Navigation = ({ location }) => {
             />
           </Link>
         )}
-        <Link className="font-sans font-bold py-1" to="/">
+        <Link className="font-sans font-black py-1 uppercase" to="/">
           {title}
         </Link>
       </div>

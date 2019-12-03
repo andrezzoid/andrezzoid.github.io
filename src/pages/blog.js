@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 const Post = ({ excerpt, slug, timeToRead, title }) => (
   <article className="max-w-3xl mb-12" key={slug}>
     <header>
-      <h2 className="text-3xl mb-2 font-serif">
+      <h2 className="text-3xl mb-2 font-sans font-bold">
         <Link className="text-green-500 hover:text-green-400" to={slug}>
           {title}
         </Link>

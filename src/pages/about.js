@@ -18,7 +18,7 @@ class Resume extends React.Component {
       <Layout location={this.props.location}>
         <SEO title="About André" />
         <div className="max-w-4xl font-serif">
-          <h1 className="text-5xl leading-tight font-serif font-bold mb-8">
+          <h1 className="text-5xl leading-tight font-sans font-bold mb-8">
             Hi, I'm André Jonas{" "}
             <span role="img" aria-label="waving hand">
               👋
@@ -30,7 +30,7 @@ class Resume extends React.Component {
             alt="André Jonas at the beach"
           />
 
-          <p className="mb-8">
+          <p className="leading-relaxed mb-8">
             But you can just call me <strong>Jonas</strong>. I am a seasoned
             software engineer and a former teacher working remotely from the{" "}
             <Link
@@ -44,7 +44,7 @@ class Resume extends React.Component {
             do their best work.
           </p>
 
-          <p className="mb-8">
+          <p className="leading-relaxed mb-8">
             I am also a co-organiser of a local tech community called{" "}
             <Link
               className="text-green-500 hover:text-green-400"
@@ -54,7 +54,7 @@ class Resume extends React.Component {
             </Link>
           </p>
 
-          <p className="mb-8">
+          <p className="leading-relaxed mb-8">
             Born in 1988 and raised in the south of Portugal, I've moved to
             Lisbon at 19 to study Computer Engineering. Halfway through I've
             started doing websites and teaching programming, web design and web
@@ -68,7 +68,7 @@ class Resume extends React.Component {
             ).
           </p>
 
-          <p className="mb-8">
+          <p className="leading-relaxed mb-8">
             Moved back to the Algarve in 2015 to be with my wonderful wife and
             our crazy dogs but there were little to no jobs here for me so I've
             started working remotely. Since then I've worked with such amazing
@@ -116,7 +116,7 @@ class Resume extends React.Component {
             </Link>{" "}
             and others.
           </p>
-          <p className="mb-8">
+          <p className="leading-relaxed mb-8">
             I'm so grateful to be able to work remotely and live the life I want
             to live. I get to meet amazing people all around the world, to live
             in the countryside but near the beach, to have pet animals, to have
@@ -126,8 +126,8 @@ class Resume extends React.Component {
               🙏
             </span>
           </p>
-
-          <h3 className="text-3xl font-bold leading-tight">
+          <hr className="border-gray-800 max-w-xs mx-auto mt-12 mb-12" />
+          <p className="text-3xl font-bold leading-tight">
             I'm back on the job market{" "}
             <span role="img" aria-label="party popper">
               🎉
@@ -138,11 +138,11 @@ class Resume extends React.Component {
             feel free to{" "}
             <Link
               className="text-green-500 hover:text-green-400"
-              to="mailto:yo@andrejonas.me"
+              to="mailto:hey@andrejonas.com"
             >
               drop me a line.
             </Link>
-          </h3>
+          </p>
         </div>
       </Layout>
     )

@@ -17,7 +17,7 @@ module.exports = {
     title: `André Jonas`,
     author: `André Jonas`,
     description: `I'm André Jonas, a seasoned software engineer and former teacher working remotely from Portugal. I am a geek, a problem solver, a communicator and forever a student.`,
-    siteUrl: `https://andre.jonas.me/`,
+    siteUrl: `https://andrejonas.com/`,
     social: {
       github: `https://github.com/andrezzoid/`,
       linkedin: `https://www.linkedin.com/in/andrejonas/`,

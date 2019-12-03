@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Aleo", ...defaultTheme.fontFamily.serif],
+        serif: ["Lora", ...defaultTheme.fontFamily.serif],
+        sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
       },
     },
   },

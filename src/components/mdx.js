@@ -9,22 +9,32 @@ export default {
     <code className="text-gray-400 bg-gray-800 px-1 rounded">{children}</code>
   ),
   h1: ({ children }) => (
-    <h1 className="text-5xl font-bold leading-tight mt-12 mb-4">{children}</h1>
+    <h1 className="text-4xl lg:text-5xl font-sans leading-tight mt-12 mb-4">
+      {children}
+    </h1>
   ),
   h2: ({ children }) => (
-    <h2 className="text-3xl font-bold leading-tight mt-12 mb-4">{children}</h2>
+    <h2 className="text-3xl font-sans font-bold leading-tight mt-12 mb-4">
+      {children}
+    </h2>
   ),
   h3: ({ children }) => (
-    <h3 className="text-2xl font-bold leading-tight mt-12 mb-4">{children}</h3>
+    <h3 className="text-2xl font-sans font-bold leading-tight mt-12 mb-4">
+      {children}
+    </h3>
   ),
   blockquote: props => (
     <blockquote
-      className="italic border-gray-600 text-gray-600 border-l-4 pl-4 mb-8"
+      className="italic border-gray-600 rounded text-gray-600 leading-relaxed border-l-4 pl-4 mb-8"
       {...props}
     />
   ),
-  ol: props => <ol className="list-decimal list-inside mb-8" {...props} />,
-  ul: props => <ul className="list-disc list-inside mb-8" {...props} />,
+  ol: props => (
+    <ol className="list-decimal list-inside mb-8 leading-relaxed" {...props} />
+  ),
+  ul: props => (
+    <ul className="list-disc list-inside mb-8 leading-relaxed" {...props} />
+  ),
   pre: ({ children: { props } }) => {
     const className = props.className || ""
     const matches = className.match(/language-(?<lang>.*)/)
@@ -40,23 +50,28 @@ export default {
         theme={theme}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre
-            className={
-              className +
-              " " +
-              "rounded mb-8 py-2 px-4 leading-normal scrolling-auto overflow-auto text-base"
-            }
-            style={style}
-          >
-            {tokens.map((line, i) => (
-              <div key={i} {...getLineProps({ line, key: i })}>
-                <span className="pr-4 opacity-25 select-none">{i + 1}</span>
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
-                ))}
-              </div>
-            ))}
-          </pre>
+          <div className="scrolling-auto overflow-auto">
+            <pre
+              className={
+                className +
+                " " +
+                "rounded mb-8 py-2 px-4 leading-normal text-base"
+              }
+              style={{
+                ...style,
+                overflow: "initial",
+              }}
+            >
+              {tokens.map((line, i) => (
+                <div key={i} {...getLineProps({ line, key: i })}>
+                  <span className="pr-4 opacity-25 select-none">{i + 1}</span>
+                  {line.map((token, key) => (
+                    <span {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              ))}
+            </pre>
+          </div>
         )}
       </Highlight>
     )
@@ -64,5 +79,6 @@ export default {
   a: ({ url, ...props }) => (
     <Link className="text-green-500 hover:text-green-400" to={url} {...props} />
   ),
-  p: props => <p className="mb-8" {...props} />,
+  p: props => <p className="mb-8 leading-relaxed" {...props} />,
+  hr: () => <hr className="border-gray-800 max-w-xs mx-auto mt-12 mb-12" />,
 }
