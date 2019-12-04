@@ -3,6 +3,20 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Link from "./link"
 
+const Email = ({ url, ...rest }) => (
+  <Link to={url} aria-label="Email me" {...rest}>
+    <svg
+      className="fill-current hover:text-gray-400"
+      viewBox="0 0 24 24"
+      height="20"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M11.585 5.267c1.834 0 3.558.811 4.824 2.08v.004c0-.609.41-1.068.979-1.068h.145c.891 0 1.073.842 1.073 1.109l.005 9.475c-.063.621.64.941 1.029.543 1.521-1.564 3.342-8.038-.946-11.79-3.996-3.497-9.357-2.921-12.209-.955-3.031 2.091-4.971 6.718-3.086 11.064 2.054 4.74 7.931 6.152 11.424 4.744 1.769-.715 2.586 1.676.749 2.457-2.776 1.184-10.502 1.064-14.11-5.188C-.977 13.521-.847 6.093 5.62 2.245 10.567-.698 17.09.117 21.022 4.224c4.111 4.294 3.872 12.334-.139 15.461-1.816 1.42-4.516.037-4.498-2.031l-.019-.678c-1.265 1.256-2.948 1.988-4.782 1.988-3.625 0-6.813-3.189-6.813-6.812 0-3.659 3.189-6.885 6.814-6.885zm4.561 6.623c-.137-2.653-2.106-4.249-4.484-4.249h-.09c-2.745 0-4.268 2.159-4.268 4.61 0 2.747 1.842 4.481 4.256 4.481 2.693 0 4.464-1.973 4.592-4.306l-.006-.536z" />
+    </svg>
+  </Link>
+)
+
 const GitHub = ({ url, ...rest }) => (
   <Link to={url} aria-label="Visit my GitHub" {...rest}>
     <svg
@@ -60,42 +74,28 @@ const RSS = ({ url, ...rest }) => (
   </a>
 )
 
-const StackOverflow = ({ url, ...rest }) => (
-  <Link to={url} aria-label="Visit my StackOverflow" {...rest}>
-    <svg
-      className="fill-current hover:text-orange-500"
-      viewBox="0 0 24 24"
-      height="20"
-      width="20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.13v6.404h15.012zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.478-2.187-.453 2.068zm1.359-5.056l9.705 4.53.903-1.95-9.706-4.53-.902 1.936v.014zm2.715-4.785l8.217 6.855 1.359-1.62-8.216-6.853-1.35 1.617-.01.001zM15.751 0l-1.746 1.294 6.405 8.604 1.746-1.294L15.749 0h.002z" />
-    </svg>
-  </Link>
-)
-
 const Social = () => {
   const data = useStaticQuery(graphql`
     query FooterQuery {
       site {
         siteMetadata {
+          email
           social {
             github
             linkedin
             twitter
-            stackoverflow
           }
         }
       }
     }
   `)
-  const { social } = data.site.siteMetadata
+  const { email, social } = data.site.siteMetadata
   return (
     <div className="flex">
+      <Email className="p-2" url={`mailto:${email}`} />
       <GitHub className="p-2" url={social.github} />
       <LinkedIn className="p-2" url={social.linkedin} />
       <Twitter className="p-2" url={social.twitter} />
-      <StackOverflow className="p-2" url={social.stackoverflow} />
       <RSS className="p-2" url="/blog/rss.xml" />
     </div>
   )

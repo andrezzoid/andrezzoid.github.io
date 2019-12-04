@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
             <h1 className="text-5xl leading-tight font-serif">
               {post.frontmatter.title}
             </h1>
-            <p className="text-gray-600 font-sans text-base">
+            <p className="text-gray-600 leading-loose font-sans text-base">
               {formatReadingTime(post.timeToRead)}
             </p>
           </header>
