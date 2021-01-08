@@ -51,6 +51,7 @@ module.exports = {
           gatsbyRemarkImages,
           `gatsby-remark-embedder`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-copy-linked-files`
         ],
         plugins: [
           // FIXME: keep an eye for a fix on this issue: https://github.com/gatsbyjs/gatsby/issues/15486#issuecomment-510153237
